@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spinny Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;   /* black background */
+  color: white;             /* white text */
+}
+
+    }
+
+    .navbar {
+      background-color:black;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link,
+    .navbar .navbar-text {
+      color:white !important;
+    }
+
+    .navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:hover {
+      box-shadow: none;
+      background-color: transparent;
+      outline: none;
+    }
+
+    .navbar .nav-link,
+    .navbar .dropdown-toggle {
+      transition: none !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .dropdown-toggle:hover {
+      background-color: transparent !important;
+    }
+
+    .filter-bar {
+      background-color: #5b007e;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-bar .dropdown-toggle {
+      color: white;
+      background-color: transparent;
+      border: none;
+    }
+
+    .filter-bar .dropdown-toggle:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      transition: background-image 1s ease-in-out;
+      color:white;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      max-width: 400px;
+      margin-left: 50px;
+      border-radius: 10px;
+    }
+
+    .btn-pink {
+      background-color: #ff3e5b;
+      color: black;
+      border: none;
+    }
+
+    .btn-pink:hover {
+      background-color: #e8344f;
+    }
+
+    .search-bar input {
+      border-radius: 5px;
+      padding: 5px 10px;
+      border: none;
+    }
+
+    .dropdown-menu {
+      min-width: 200px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://s.tmimgcdn.com/scr/1200x627/330800/auto-car-service-logo-template-design_330865-original.jpg" alt="Logo" width="60" class="me-2">
+      <strong>Buy and Sell Vehicles</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+            Select city
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mumbai.html">Mumbai</a></li>
+            <li><a class="dropdown-item" href="delhi.html">Delhi</a></li>
+            <li><a class="dropdown-item" href="bangalore.html">Bangalore</a></li>
+            <li><a class="dropdown-item" href="chennai.html">Chennai</a></li>
+            <li><a class="dropdown-item" href="hyderabad.html">Hyderabad</a></li>
+            <li><a class="dropdown-item" href="pune.html">Pune</a></li>
+            <li><a class="dropdown-item" href="ahmedabad.html">Ahmedabad</a></li>
+            <li><a class="dropdown-item" href="kolkata.html">Kolkata</a></li>
+            <li><a class="dropdown-item" href="jaipur.html">Jaipur</a></li>
+            <li><a class="dropdown-item" href="surat.html">Surat</a></li>
+            <li><a class="dropdown-item" href="lucknow.html">Lucknow</a></li>
+            <li><a class="dropdown-item" href="indore.html">Indore</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <form class="d-flex search-bar" role="search">
+            <input class="form-control" type="search" placeholder="Search by make" aria-label="Search">
+          </form>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Buy car</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="New.html">New</a></li>
+            <li><a class="dropdown-item" href="UsedCars.html">Used</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sell car</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="InstantOffer.html">Instant Offer</a></li>
+            <li><a class="dropdown-item" href="inspection.html">Schedule Inspection</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Financing.html">Financing</a></li>
+            <li><a class="dropdown-item" href="Insurance.html">Insurance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="Shortlisted.html">🛒 Cart</a></li>
+        
+<!-- Replace account.php with Login/Register buttons -->
+<li class="nav-item"><a class="nav-link" href="#" onclick="showLogin()">Login</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="showRegister()">Register</a></li>
+
+<!-- Optional: Logout button shown when logged in -->
+<li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Logout</a></li>
+
+        <li class="nav-item navbar-text fw-bold ms-3">98123-45680</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Filter Bar -->
+<div class="filter-bar text-white d-flex gap-3 px-4">
+  <div class="dropdown">
+    <button class="dropdown-toggle" data-bs-toggle="dropdown">Make & Model</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="maruti.html">Maruti</a></li>
+      <li><a class="dropdown-item" href="hyundai.html">Hyundai</a></li>
+      <li><a class="dropdown-item" href="tata.html">Tata</a></li>
+      <li><a class="dropdown-item" href="mahindra.html">Mahindra</a></li>
+      <li><a class="dropdown-item" href="toyota.html">Toyota</a></li>
+      <li><a class="dropdown-item" href="kia.html">Kia</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown-toggle" data-bs-toggle="dropdown">Year</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="2025.html">2025</a></li>
+      <li><a class="dropdown-item" href="2024.html">2024</a></li>
+      <li><a class="dropdown-item" href="2023.html">2023</a></li>
+      <li><a class="dropdown-item" href="2022.html">2022</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown-toggle" data-bs-toggle="dropdown">Fuel</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="Petrol.html">Petrol</a></li>
+      <li><a class="dropdown-item" href="Diesel.html">Diesel</a></li>
+      <li><a class="dropdown-item" href="Electric.html">Electric</a></li>
+      <li><a class="dropdown-item" href="CNG.html">CNG</a></li>
+      <li><a class="dropdown-item" href="Hybrid.html">Hybrid</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown-toggle" data-bs-toggle="dropdown">Body Type</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="suv.html">SUV</a></li>
+      <li><a class="dropdown-item" href="hatchback.html">Hatchback</a></li>
+      <li><a class="dropdown-item" href="sedan.html">Sedan</a></li>
+      <li><a class="dropdown-item" href="convertible.html">Convertible</a></li>
+      <li><a class="dropdown-item" href="coupe.html">Coupe</a></li>
+      <li><a class="dropdown-item" href="van.html">Van</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="dropdown-toggle" data-bs-toggle="dropdown">Transmission</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="automatic.html">Automatic</a></li>
+      <li><a class="dropdown-item" href="manual.html">Manual</a></li>
+      <li><a class="dropdown-item" href="amt.html">AMT</a></li>
+      <li><a class="dropdown-item" href="cvt.html">CVT</a></li>
+      <li><a class="dropdown-item" href="dct.html">DCT</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hero Section with Background Slider -->
+<section class="hero" id="hero">
+  <div class="hero-overlay">
+    <h1>selling, easy like Sunday.</h1>
+    <p>best price for your car</p>
+    <button class="btn btn-pink">Sell your car</button>
+  </div>
+</section>
+
+<!-- Bootstrap JS and Background Slider Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const images = [
+    "https://images.hindustantimes.com/img/2022/09/13/1600x900/Maruti_Suzuki_1663060132254_1663060132597_1663060132597.jpg",
+    "https://img.indianautosblog.com/2020/03/24/maruti-swift-front-three-quarters-left-side-4a8f.jpg",
+    "https://th.bing.com/th/id/OIP.XcpRJ9Q9tim9-q0_C7Jy2gHaEb?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+  ];
+  let index = 0;
+  const hero = document.getElementById("hero");
+
+  function changeBackground() {
+    index = (index + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[index]})`;
+  }
+
+  hero.style.backgroundImage = `url(${images[0]})`;
+  setInterval(changeBackground, 4000);
+</script>
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!-- Car 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://automobilehive.com/wp-content/uploads/2020/11/Maruti-Suzuki-Alto-800--1140x694.png" class="card-img-top" alt="Alto 800">
+        <div class="card-body">
+          <h6 class="card-title">2017 Maruti Suzuki Alto 800 LXI</h6>
+          <p class="card-text">45,000 km | Petrol | Hyderabad</p>
+          <h5>₹5.1 Lakh</h5>
+          <p><strong>Seller:</strong> Ravi Kumar<br>
+          <strong>Phone:</strong> +91 98765 43210<br>
+          <strong>Location:</strong> Hyderabad, Telangana</p>
+          <button onclick="addToShortlist('Maruti Suzuki Alto')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://fastly-production.24c.in/hello-ar/dev/uploads/66ebc29958077fded050a159/fe7f7a88-4eaf-4703-b1aa-7836b828d048/slot/10297531767-91771f34785341eb83c3e95f580f0471-Exterior-7.jpg?w=1080&auto=format" class="card-img-top" alt="Hyundai Creta">
+        <div class="card-body">
+          <h6 class="card-title">2020 Hyundai Creta SX</h6>
+          <p class="card-text">30,000 km | Petrol | Bangalore</p>
+          <h5>₹13.5 Lakh</h5>
+          <p><strong>Seller:</strong> Meena Joshi<br>
+          <strong>Phone:</strong> +91 91234 56789<br>
+          <strong>Location:</strong> Bangalore, Karnataka</p>
+          <button onclick="addToShortlist('Hyndai Creta')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 3 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://media.zigcdn.com/media/model/2020/Jan/front-1049653033_930x620.jpg" class="card-img-top" alt="Tiago XZ">
+        <div class="card-body">
+          <h6 class="card-title">2021 Tata Tiago XZ</h6>
+          <p class="card-text">22,000 km | Petrol | Pune</p>
+          <h5>₹5.4 Lakh</h5>
+          <p><strong>Seller:</strong> Neha Patil<br>
+          <strong>Phone:</strong> +91 99887 66554<br>
+          <strong>Location:</strong> Pune, Maharashtra</p>
+          <button onclick="addToShortlist('Tata Tiago')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 4 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cartoq.s3.ap-south-1.amazonaws.com/media/Car/Hyundai_Venue-Colours-Abyss_Black-7716aa30.webp" class="card-img-top" alt="Venue">
+        <div class="card-body">
+          <h6 class="card-title">2023 Hyundai Venue SX(O) Turbo</h6>
+          <p class="card-text">5,000 km | Petrol | Chennai</p>
+          <h5>₹12.9 Lakh</h5>
+          <p><strong>Seller:</strong> Ramesh Iyer<br>
+          <strong>Phone:</strong> +91 90909 12345<br>
+          <strong>Location:</strong> Chennai, Tamil Nadu</p>
+          <button onclick="addToShortlist('Hyundai Venue')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 5 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://stat.overdrive.in/wp-content/odgallery/2022/02/61541_2022_Suzuki_Baleno.jpg" class="card-img-top" alt="Baleno">
+        <div class="card-body">
+          <h6 class="card-title">2022 Maruti Suzuki Baleno Zeta</h6>
+          <p class="card-text">12,000 km | Petrol | Mumbai</p>
+          <h5>₹8.2 Lakh</h5>
+          <p><strong>Seller:</strong> Arjun Desai<br>
+          <strong>Phone:</strong> +91 90123 45678<br>
+          <strong>Location:</strong> Mumbai, Maharashtra</p>
+          <button onclick="addToShortlist('Maruti Suzuki Baleno Zeta')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 6 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://fastly-production.24c.in/hello-ar/dev/uploads/5bc72aa4-3ef8-4102-a206-e89042a41f71/4916cf2a-0448-4a84-8a6c-41c0d0a5aa50/1.jpg?w=1080&auto=format">
+        <div class="card-body">
+          <h6 class="card-title">2021 Nissan Magnite XV Turbo</h6>
+          <p class="card-text">20,000 km | Petrol | Ahmedabad</p>
+          <h5>₹7.9 Lakh</h5>
+          <p><strong>Seller:</strong> Priya Shah<br>
+          <strong>Phone:</strong> +91 88888 77777<br>
+          <strong>Location:</strong> Ahmedabad, Gujarat</p>
+          <button onclick="addToShortlist('Nissan Magnite XV Turbo')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 7 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.B9yLuuGQcXy7QrYWBJLgKAHaEc?pid=Api&P=0&h=180" class="card-img-top" alt="Seltos">
+        <div class="card-body">
+          <h6 class="card-title">2023 Kia Seltos HTX Diesel</h6>
+          <p class="card-text">8,000 km | Diesel | Kochi</p>
+          <h5>₹16.3 Lakh</h5>
+          <p><strong>Seller:</strong> John Mathew<br>
+          <strong>Phone:</strong> +91 98760 43210<br>
+          <strong>Location:</strong> Kochi, Kerala</p>
+          <button onclick="addToShortlist('Kia Selton HTX Diesel')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 8 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.motoo.com.br/fotos/2022/8/960_720/royal-enfield_hunter-350_2022_19_18082022_50251_960_720.jpg" class="card-img-top" alt="Hunter 350">
+        <div class="card-body">
+          <h6 class="card-title">2023 Royal Enfield Hunter 350</h6>
+          <p class="card-text">3,000 km | Petrol | Kolkata</p>
+          <h5>₹1.6 Lakh</h5>
+          <p><strong>Seller:</strong> Suraj Banerjee<br>
+          <strong>Phone:</strong> +91 90111 11223<br>
+          <strong>Location:</strong> Kolkata, West Bengal</p>
+          <button onclick="addToShortlist('Rayol enfield Hunter 350')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 9 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://media.mahindrafirstchoice.com/live_web_images/usedcarsimg/mfc/405/560935/cover_image-20230318120919.jpeg" class="card-img-top" alt="XUV700">
+        <div class="card-body">
+          <h6 class="card-title">2022 Mahindra XUV700 AX7</h6>
+          <p class="card-text">15,000 km | Diesel | Delhi</p>
+          <h5>₹21.7 Lakh</h5>
+          <p><strong>Seller:</strong> Alok Verma<br>
+          <strong>Phone:</strong> +91 99999 12345<br>
+          <strong>Location:</strong> New Delhi</p>
+          <button onclick="addToShortlist('Mahindra ')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 10 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://img.autotrader.co.za/24006429" class="card-img-top" alt="Scorpio-N">
+        <div class="card-body">
+          <h6 class="card-title">2023 Mahindra Scorpio-N Z8L</h6>
+          <p class="card-text">4,500 km | Diesel | Nagpur</p>
+          <h5>₹21.2 Lakh</h5>
+          <p><strong>Seller:</strong> Manoj Sharma<br>
+          <strong>Phone:</strong> +91 91234 99999<br>
+          <strong>Location:</strong> Nagpur, Maharashtra</p>
+          <button onclick="addToShortlist('Mahindra Scorpio')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add remaining cars (11 to 20) and 2 bikes following same pattern -->
+    <!-- Car 11 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn1.acedms.com/uploads/category/Maruti-Suzuki/20230425095640000000-5137325852478602241.jpg" class="card-img-top" alt="Fronx">
+        <div class="card-body">
+          <h6 class="card-title">2023 Maruti Suzuki Fronx Delta Plus</h6>
+          <p class="card-text">3,200 km | Petrol | Jaipur</p>
+          <h5>₹9.1 Lakh</h5>
+          <p><strong>Seller:</strong> Shweta Goyal<br>
+          <strong>Phone:</strong> +91 90900 11223<br>
+          <strong>Location:</strong> Jaipur, Rajasthan</p>
+          <button onclick="addToShortlist('Maruti Suzuki Fronx Delta Plus')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 12 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn1.acedms.com/uploads/category/Tata/20231108065838000000-3788000086359274497.jpg" class="card-img-top" alt="Harrier">
+        <div class="card-body">
+          <h6 class="card-title">2024 Tata Harrier Fearless</h6>
+          <p class="card-text">1,000 km | Diesel | Surat</p>
+          <h5>₹22.5 Lakh</h5>
+          <p><strong>Seller:</strong> Ankit Thakkar<br>
+          <strong>Phone:</strong> +91 98222 66778<br>
+          <strong>Location:</strong> Surat, Gujarat</p>
+          <button onclick="addToShortlist('Tata Harrier Fearless')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 13 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn.jdpower.com/JDP_2022%20Jeep%20Compass%20Limited%20Gray%20Front%20Quarter%20View.jpg" class="card-img-top" alt="Compass">
+        <div class="card-body">
+          <h6 class="card-title">2022 Jeep Compass Limited</h6>
+          <p class="card-text">18,000 km | Diesel | Noida</p>
+          <h5>₹23.3 Lakh</h5>
+          <p><strong>Seller:</strong> Karan Mehta<br>
+          <strong>Phone:</strong> +91 93456 77889<br>
+          <strong>Location:</strong> Noida, Uttar Pradesh</p>
+          <button onclick="addToShortlist('Jeep Compass')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 14 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdni.autocarindia.com/ExtraImages/20230112041003_Punch_iCNG.jpg" class="card-img-top" alt="Punch">
+        <div class="card-body">
+          <h6 class="card-title">2023 Tata Punch Accomplished</h6>
+          <p class="card-text">6,000 km | Petrol | Indore</p>
+          <h5>₹7.5 Lakh</h5>
+          <p><strong>Seller:</strong> Vishal Rathi<br>
+          <strong>Phone:</strong> +91 70123 98765<br>
+          <strong>Location:</strong> Indore, Madhya Pradesh</p>
+          <button onclick="addToShortlist('Tata Punch Accomplished')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 15 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://imgd.aeplcdn.com/640X480/image/used/tojdpjhvu2v1.jpg?q=80" class="card-img-top" alt="Grand Vitara">
+        <div class="card-body">
+          <h6 class="card-title">2023 Maruti Grand Vitara Alpha</h6>
+          <p class="card-text">9,000 km | Petrol | Bhopal</p>
+          <h5>₹13.8 Lakh</h5>
+          <p><strong>Seller:</strong> Ritu Sen<br>
+          <strong>Phone:</strong> +91 91111 22334<br>
+          <strong>Location:</strong> Bhopal, Madhya Pradesh</p>
+          <button onclick="addToShortlist('Maruti Grand Vitara Alpha')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 16 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/115135/kiger-exterior-right-front-three-quarter-6.jpeg?isig=0&q=75" class="card-img-top" alt="Kiger">
+        <div class="card-body">
+          <h6 class="card-title">2022 Renault Kiger RXZ Turbo</h6>
+          <p class="card-text">10,000 km | Petrol | Lucknow</p>
+          <h5>₹8.1 Lakh</h5>
+          <p><strong>Seller:</strong> Imran Khan<br>
+          <strong>Phone:</strong> +91 98765 67890<br>
+          <strong>Location:</strong> Lucknow, Uttar Pradesh</p>
+          <button onclick="addToShortlist('Renault Kiger')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 17 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.IITIpGSHj-NIzQkOEOvRVQHaEG?pid=Api&P=0&h=180" class="card-img-top" alt="Taigun">
+        <div class="card-body">
+          <h6 class="card-title">2023 Volkswagen Taigun GT</h6>
+          <p class="card-text">5,500 km | Petrol | Chandigarh</p>
+          <h5>₹15.4 Lakh</h5>
+          <p><strong>Seller:</strong> Gaurav Singh<br>
+          <strong>Phone:</strong> +91 99889 33221<br>
+          <strong>Location:</strong> Chandigarh</p>
+          <button onclick="addToShortlist('Volkswagen Taigun')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 18 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://imgin.waa2.com/car/080623/maruti-suzuki-brezza-zxi-2022-2023-642fd3d76748a37c2ce9020f6760706e_thumb.jpg" class="card-img-top" alt="Brezza">
+        <div class="card-body">
+          <h6 class="card-title">2023 Maruti Suzuki Brezza ZXI+</h6>
+          <p class="card-text">4,000 km | Petrol | Patna</p>
+          <h5>₹11.2 Lakh</h5>
+          <p><strong>Seller:</strong> Nilesh Kumar<br>
+          <strong>Phone:</strong> +91 90100 77665<br>
+          <strong>Location:</strong> Patna, Bihar</p>
+          <button onclick="addToShortlist('Maruti Suzuki Brezza')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 19 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://st1.photogallery.ind.sh/wp-content/uploads/indiacom/maruti-suzuki-ignis-alpha-amt-engine-201708-1501755368-650x510.jpg" class="card-img-top" alt="suzuki">
+        <div class="card-body">
+          <h6 class="card-title">2021 Maruti Suzuki Ignis Alpha</h6>
+          <p class="card-text">25,000 km | Petrol | Ranchi</p>
+          <h5>₹5.9 Lakh</h5>
+          <p><strong>Seller:</strong> Sneha Rani<br>
+          <strong>Phone:</strong> +91 98333 22110<br>
+          <strong>Location:</strong> Ranchi, Jharkhand</p>
+          <button onclick="addToShortlist('Maruti Suzuki Ignis Alpha')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 20 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.drivespark.com/car-image/640x480x100/car/3380673-hyundai_verna.jpg" class="card-img-top" alt="Verna">
+        <div class="card-body">
+          <h6 class="card-title">2023 Hyundai Verna SX IVT</h6>
+          <p class="card-text">7,000 km | Petrol | Raipur</p>
+          <h5>₹14.1 Lakh</h5>
+          <p><strong>Seller:</strong> Tarun Sahu<br>
+          <strong>Phone:</strong> +91 91234 11122<br>
+          <strong>Location:</strong> Raipur, Chhattisgarh</p>
+          <button onclick="addToShortlist('Hyndai Verna')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bike 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.iamabiker.com/wp-content/uploads/2023/08/2024-KTM-Duke-390.jpg" class="card-img-top" alt="Duke 390">
+        <div class="card-body">
+          <h6 class="card-title">2024 KTM Duke 390</h6>
+          <p class="card-text">1,200 km | Petrol | Pune</p>
+          <h5>₹3.3 Lakh</h5>
+          <p><strong>Seller:</strong> Sahil More<br>
+          <strong>Phone:</strong> +91 90999 88877<br>
+          <strong>Location:</strong> Pune, Maharashtra</p>
+          <button onclick="addToShortlist('KTM Duke')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bike 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://ultimatemotorcycling.com/wp-content/uploads/2021/09/2022-royal-enfield-classic-350-first-look-retro-motorcycle-india-7.jpg" class="card-img-top" alt="Classic 350">
+        <div class="card-body">
+          <h6 class="card-title">2023 Royal Enfield Classic 350</h6>
+          <p class="card-text">3,800 km | Petrol | Mysore</p>
+          <h5>₹2.2 Lakh</h5>
+          <p><strong>Seller:</strong> Darshan Shetty<br>
+          <strong>Phone:</strong> +91 92233 44556<br>
+          <strong>Location:</strong> Mysore, Karnataka</p>
+          <button onclick="addToShortlist('Royal Enfield Classic')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+<!-- Login Modal -->
+<div id="loginModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#111; color:white; padding:30px; border-radius:10px; z-index:1000; box-shadow:0 0 15px rgba(255,255,255,0.2); width: 300px;">
+  <h2 style="text-align:center; color: #ffcc00;">Login</h2>
+  <input type="email" id="loginEmail" placeholder="Enter email" style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#222; color:white;">
+  <input type="password" id="loginPassword" placeholder="Enter password" style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#222; color:white;">
+  <button onclick="loginUser()" style="width:100%; background:#28a745; color:white; padding:10px; margin:10px 0; border:none; border-radius:5px; font-weight:bold;">Login</button>
+  <button onclick="closeModal()" style="width:100%; background:#dc3545; color:white; padding:10px; border:none; border-radius:5px;">Close</button>
+</div>
+
+
+  </form>
+</div>
+<!-- Register Modal -->
+<div id="registerModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#111; color:white; padding:30px; border-radius:10px; z-index:1000; box-shadow:0 0 15px rgba(255,255,255,0.2); width: 300px;">
+  <h2 style="text-align:center; color: #00ccff;">Register</h2>
+  <input type="text" id="registerName" placeholder="Enter name" style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#222; color:white;">
+  <input type="email" id="registerEmail" placeholder="Enter email" style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#222; color:white;">
+  <input type="password" id="registerPassword" placeholder="Enter password" style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#222; color:white;">
+  <button onclick="registerUser()" style="width:100%; background:#007bff; color:white; padding:10px; margin:10px 0; border:none; border-radius:5px; font-weight:bold;">Register</button>
+  <button onclick="closeRegisterModal()" style="width:100%; background:#dc3545; color:white; padding:10px; border:none; border-radius:5px;">Close</button>
+</div>
+<button id="logoutBtn" style="display: none;">Logout</button>
+
+ 
+
+
+
+  <script>
+  function showLogin() {
+    document.getElementById("loginModal").style.display = "block";
+  }
+
+  function showRegister() {
+    document.getElementById("registerModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+  }
+
+  function closeRegisterModal() {
+    document.getElementById("registerModal").style.display = "none";
+  }
+  function showRegister() {
+  document.getElementById("registerModal").style.display = "block";
+}
+
+function closeRegisterModal() {
+  document.getElementById("registerModal").style.display = "none";
+}
+
+async function registerUser() {
+  const name = document.getElementById("registerName").value;
+  const email = document.getElementById("registerEmail").value;
+  const password = document.getElementById("registerPassword").value;
+
+  const res = await fetch("http://localhost:5000/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await res.json();
+  if (res.ok) {
+    alert("Registration Successful!");
+    window.location.href = "index1.html";
+  } else {
+    alert(data.message || "Registration Failed");
+  }
+}
+
+
+
+  // ✅ Login form handling
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+
+    if (!email || !password) {
+      alert("❌ Please enter both email and password.");
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        alert("✅ Login successful!");
+        window.location.href = "index1.html";
+      } else {
+        alert(data.message || "❌ Invalid credentials.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Login failed.");
+    }
+  });
+
+  // ✅ Register form handling
+  document.getElementById("registerForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("registerName").value.trim();
+    const email = document.getElementById("registerEmail").value.trim();
+    const password = document.getElementById("registerPassword").value.trim();
+
+    if (!name || !email || !password) {
+      alert("❌ Please fill all fields.");
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ Registration successful!");
+        window.location.href = "index1.html";
+      } else {
+        alert(data.message || "❌ Registration failed.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Registration error.");
+    }
+  });
+  const user = JSON.parse(localStorage.getItem("user"));
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (user) {
+  logoutBtn.style.display = "block"; // show logout button
+} else {
+  logoutBtn.style.display = "none"; // hide logout button
+}
+
+
+</script>
+<script>
+function addToShortlist(carTitle) {
+  const userEmail = localStorage.getItem("userEmail"); // Get user email from localStorage
+
+  if (!userEmail) {
+    alert("Please login to add cars to your shortlist.");
+    return;
+  }
+
+  fetch("http://localhost:5000/shortlist", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: userEmail, car: carTitle })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert("✅ Car added to your shortlist!");
+    } else {
+      alert("❌ Failed to add to shortlist: " + data.message);
+    }
+  })
+  .catch(error => {
+    console.error("Shortlist error:", error);
+    alert("Something went wrong while shortlisting!");
+  });
+}
+</script>
+
+
+</script>
+
+<script src="frontend/car.js"></script>
+<script src="login.js"></script>
+<script src="register.js"></script>
+<script src="logout.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
