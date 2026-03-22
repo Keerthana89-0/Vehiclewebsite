@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AMT Transmission Cars</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f9fbfd; padding: 20px; }
+    header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 1000px; margin: 20px auto; }
+    .car { display: flex; background: white; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; }
+    .car img { width: 200px; height: auto; border-radius: 8px; margin-right: 20px; }
+    .car-details h3 { margin: 0; }
+    .specs { color: #555; }
+    .price { color: green; font-weight: bold; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AMT Transmission Cars</h1>
+  </header>
+  <div class="container">
+    
+        <div class="car">
+            <img src="https://via.placeholder.com/200x130?text=Maruti+Alto+K10+VXI+AMT" alt="Maruti Alto K10 VXI AMT">
+            <div class="car-details">
+                <h3>Maruti Alto K10 VXI AMT</h3>
+                <div class="specs">Petrol | 24.0 km/l</div>
+                <div class="price">25 Lakhs</div>
+                 <button onclick="addToShortlist('Maruti Alto K10 VXI AMT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://img.gaadicdn.com/images/carexteriorimages/930x620/Tata/Tiago/7338/1660898465523/front-left-side-47.jpg" alt="Tata Tiago XTA">
+            <div class="car-details">
+                <h3>Tata Tiago XTA</h3>
+                <div class="specs">Petrol | 23.8 km/l</div>
+                <div class="price">19 Lakhs</div>
+                 <button onclick="addToShortlist('Tata Tiago XTA')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://fastly-production.24c.in/hello-ar/dev/uploads/670e591123e1179f9bcca404/fb92fea5-9c9d-4cfe-a0e9-aaf84f8be18f/slot/10449435719-24c6cce59dad4f5e926f950c23ca554e-Exterior-7.jpg?w=700&h=403&auto=format" alt="Renault Triber RXL AMT">
+            <div class="car-details">
+                <h3>Renault Triber RXL AMT</h3>
+                <div class="specs">Petrol | 19.0 km/l</div>
+                <div class="price">13 Lakhs</div>
+                 <button onclick="addToShortlist('Renault Triber RXL AMT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Santro/7457/1644827486248/front-left-side-47.jpg" alt="Hyundai Santro Sportz AMT">
+            <div class="car-details">
+                <h3>Hyundai Santro Sportz AMT</h3>
+                <div class="specs">Petrol | 20.3 km/l</div>
+                <div class="price">17 Lakhs</div>
+                 <button onclick="addToShortlist('Hyundai Santro Sportz AMT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Maruti-Celerio-X/6043/front-left-side-47.jpg?tr=w-420" alt="Maruti Celerio ZXI AMT">
+            <div class="car-details">
+                <h3>Maruti Celerio ZXI AMT</h3>
+                <div class="specs">Petrol | 26.6 km/l</div>
+                <div class="price">23 Lakhs</div>
+                 <button onclick="addToShortlist('Maruti Celerio ZXI AMT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+  </div>
+</body>
+</html>

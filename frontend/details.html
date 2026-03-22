@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Details</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .card { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2); max-width:500px; margin:auto; }
+    h2 { margin-top:0; }
+    .owner { margin-top:20px; padding:10px; border-top:1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Car Details</h2>
+    <div id="carDetails"></div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      let car = JSON.parse(localStorage.getItem("selectedCar"));
+
+      // ✅ If nothing in localStorage, try to read from URL query params
+      if (!car) {
+        const params = new URLSearchParams(window.location.search);
+        car = {
+          name: params.get("name"),
+          model: params.get("model"),
+          year: params.get("year"),
+          fuel: params.get("fuel"),
+          kms: params.get("kms"),
+          price: params.get("price"),
+          ownerName: params.get("ownerName"),
+          ownerEmail: params.get("ownerEmail"),
+          ownerPhone: params.get("ownerPhone")
+        };
+      }
+
+      let container = document.getElementById("carDetails");
+
+      if (!car || !car.name) {
+        container.innerHTML = "<p>No car selected.</p>";
+      } else {
+        container.innerHTML = `
+          <p><strong>Car:</strong> ${car.name} ${car.model}</p>
+          <p><strong>Year:</strong> ${car.year}</p>
+          <p><strong>Fuel:</strong> ${car.fuel}</p>
+          <p><strong>Kilometers:</strong> ${car.kms}</p>
+          <p><strong>Price:</strong> ${car.price}</p>
+          <div class="owner">
+            <h3>Owner Details</h3>
+            <p><strong>Name:</strong> ${car.ownerName}</p>
+            <p><strong>Email:</strong> ${car.ownerEmail}</p>
+            <p><strong>Phone:</strong> ${car.ownerPhone}</p>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

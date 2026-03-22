@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyderabad - Available Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .car {
+            background: white;
+            display: flex;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .car img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .car-details h3 {
+            margin: 0;
+            color: #333;
+        }
+        .specs, .seller {
+            color: #666;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Cars in Hyderabad</h1>
+<div class="car">
+<img alt="Maruti Swift ZXI" src="https://tse4.mm.bing.net/th/id/OIP.m8b1RYPTxfNk0pxfh8CWNAHaE8?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Maruti Swift ZXI</h3>
+<div class="specs">Petrol | 22.0 km/l</div>
+<div class="price">8.7 Lakhs</div>
+<div class="seller">Seller: Star Cars, Kolkata</div>
+<button onclick="addToShortlist('Maruti Swift ZXI')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Mercedes C-Class Cabriolet" src="https://tse1.mm.bing.net/th/id/OIP.QaEMC2WaGbmA3Yg8PF2RMgHaEK?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Mercedes C-Class Cabriolet</h3>
+<div class="specs">Petrol | 12.2 km/l</div>
+<div class="price">32.2 Lakhs</div>
+<div class="seller">Seller: SuperAuto, Chennai</div>
+<button onclick="addToShortlist('Mercedes C-Class Cabriolet')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Mercedes AMG C43" src="https://tse4.mm.bing.net/th/id/OIP.8irWxbCn7yadD960xOXEcgHaEn?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Mercedes AMG C43</h3>
+<div class="specs">Petrol | 11.5 km/l</div>
+<div class="price">23.2 Lakhs</div>
+<div class="seller">Seller: StarDrive, Mumbai</div>
+<button onclick="addToShortlist('Mercedes AMG C43')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="MG Hector Sharp" src="https://tse2.mm.bing.net/th/id/OIP.Nh_vFkZgfTz1mx2mMxwvFQAAAA?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>MG Hector Sharp</h3>
+<div class="specs">Petrol | 14.5 km/l</div>
+<div class="price">18.3 Lakhs</div>
+<div class="seller">Seller: Elite Auto, Hyderabad</div>
+<button onclick="addToShortlist('MG Hector Sharp')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Kia Seltos HTK+" src="https://tse4.mm.bing.net/th/id/OIP.A0mg_rOsehnlbOdtuMCAGQHaEc?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Kia Seltos HTK+</h3>
+<div class="specs">Petrol | 16.5 km/l</div>
+<div class="price">16.2 Lakhs</div>
+<div class="seller">Seller: Prime Wheels, Bangalore</div>
+<button onclick="addToShortlist('>Kia Seltos HTK+')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Maruti Eeco 5-Seater" src="https://tse1.mm.bing.net/th/id/OIP.fDdVoAjZ-bR-r4jy_9FShQHaFL?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Maruti Eeco 5-Seater</h3>
+<div class="specs">Petrol | 16.1 km/l</div>
+<div class="price">5.4 Lakhs</div>
+<div class="seller">Seller: Family Cars, Patna</div>
+<button onclick="addToShortlist('Maruti Eeco 5-Seater')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Honda City VX" src="https://tse3.mm.bing.net/th/id/OIP.sNcK1O6y6uoeGksv2hPQ7QHaFj?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Honda City VX</h3>
+<div class="specs">Petrol | 17.8 km/l</div>
+<div class="price">14.3 Lakhs</div>
+<div class="seller">Seller: Metro Cars, Delhi</div>
+<button onclick="addToShortlist('Honda City VX')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div>
+</body>
+</html>

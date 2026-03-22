@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ahmedabad - Available Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .car {
+            background: white;
+            display: flex;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .car img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .car-details h3 {
+            margin: 0;
+            color: #333;
+        }
+        .specs, .seller {
+            color: #666;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Cars in Ahmedabad</h1>
+<div class="car">
+<img alt="Audi A5 Cabriolet" src="https://tse4.mm.bing.net/th/id/OIP.OMikUq-toj2n0P7ii-VSvAHaEK?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Audi A5 Cabriolet</h3>
+<div class="specs">Petrol | 13.0 km/l</div>
+<div class="price">15.9 Lakhs</div>
+<div class="seller">Seller: Elite Drive, Hyderabad</div>
+ <button onclick="addToShortlist('Audi A5 Cabriolet')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Toyota Innova Crysta" src="https://tse2.mm.bing.net/th/id/OIP.2DhPmp41bdZjLVNueHH8-gHaEK?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Toyota Innova Crysta</h3>
+<div class="specs">Diesel | 15.6 km/l</div>
+<div class="price">25.9 Lakhs</div>
+<div class="seller">Seller: Reliable Motors, Nashik</div>
+ <button onclick="addToShortlist('Toyota Innova Crysta')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Renault Triber RXZ" src="https://tse2.mm.bing.net/th/id/OIP.mLcOrQeJNya72bL3oInEgwHaFL?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Renault Triber RXZ</h3>
+<div class="specs">Petrol | 19.0 km/l</div>
+<div class="price">18.0 Lakhs</div>
+<div class="seller">Seller: Safe Rides, Kochi</div>
+ <button onclick="addToShortlist('Renault Triber RXZ')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Jaguar F-Type" src="https://tse1.mm.bing.net/th/id/OIP.phR7uuZW3tKYOvLz3Xet5AHaE8?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Jaguar F-Type</h3>
+<div class="specs">Petrol | 12.3 km/l</div>
+<div class="price">20.9 Lakhs</div>
+<div class="seller">Seller: Dream Cars, Bangalore</div>
+ <button onclick="addToShortlist('Jaguar F-Type')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Volkswagen Vento Highline" src="https://tse3.mm.bing.net/th/id/OIP.rQnm_WnA4EC0jgaoYPHP_AHaFj?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Volkswagen Vento Highline</h3>
+<div class="specs">Petrol | 17.7 km/l</div>
+<div class="price">11.2 Lakhs</div>
+<div class="seller">Seller: Budget Motors, Bhopal</div>
+ <button onclick="addToShortlist('Volkswagen Vento Highline')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Tata Harrier XT" src="https://tse1.mm.bing.net/th/id/OIP.SYCNneD0A0a7eg8yYRPqiAHaEj?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Tata Harrier XT</h3>
+<div class="specs">Diesel | 17.0 km/l</div>
+<div class="price">17.0 Lakhs</div>
+<div class="seller">Seller: SpeedyCars, Mumbai</div>
+ <button onclick="addToShortlist('Tata Harrier XT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div><div class="car">
+<img alt="Renault Kwid RXT" src="https://tse4.mm.bing.net/th/id/OIP.quWzodI9GgxxMlhejbOw_QHaFj?pid=Api&P=0&h=180"/>
+<div class="car-details">
+<h3>Renault Kwid RXT</h3>
+<div class="specs">Petrol | 22.3 km/l</div>
+<div class="price">16.2 Lakhs</div>
+<div class="seller">Seller: CarHub, Jaipur</div>
+ <button onclick="addToShortlist('Renault Kwid RXT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+</div>
+</div>
+</body>
+</html>

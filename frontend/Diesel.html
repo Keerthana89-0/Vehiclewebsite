@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diesel Cars</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #34495e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .car {
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .car img {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .car-details {
+      flex: 1;
+    }
+
+    .car-details h3 {
+      margin-top: 0;
+    }
+
+    .specs {
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .price {
+      color: #2ecc71;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #1c5981;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Diesel Cars</h1>
+</header>
+
+<div class="container">
+
+  <div class="car">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.BUbXu5baafNAjVJdWl6I-QHaE6?pid=Api&P=0&h=180" alt="Kia Seltos">
+    <div class="car-details">
+      <h3>2024 Kia Seltos HTX Diesel</h3>
+      <div class="specs">Automatic | Diesel | 0 km</div>
+      <div class="price">$22,900</div>
+      <a href="#" class="btn">View Details</a>
+      <button> onclick="addToShortlist(' Kia Seltos HTX Diesel')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse1.mm.bing.net/th/id/OIP._s2QndgSzv_RdvuBakZMxgHaEK?pid=Api&P=0&h=180" alt="Mahindra Scorpio">
+    <div class="car-details">
+      <h3>2024 Mahindra Scorpio N</h3>
+      <div class="specs">Manual | Diesel | 0 km</div>
+      <div class="price">23 lakhs</div>
+      <a href="#" class="btn">View Details</a>
+      <button> onclick="addToShortlist('Mahindra Scorpio N')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.5ttFnIvP69IGav7iPQsczwHaE_?pid=Api&P=0&h=180" alt="Hyundai Creta">
+    <div class="car-details">
+      <h3>2024 Hyundai Creta SX Diesel</h3>
+      <div class="specs">Automatic | Diesel | 0 km</div>
+      <div class="price">23.5 Lakhs </div>
+      <a href="#" class="btn">View Details</a>
+      <button> onclick="addToShortlist('Hyundai Creta SX Diesel')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

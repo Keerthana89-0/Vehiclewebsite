@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2025 Car Models</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .car {
+      background-color: white;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+    .car img {
+      width: 200px;
+      height: auto;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+    .details h3 {
+      margin: 0;
+      font-size: 1.4em;
+    }
+    .specs {
+      color: #666;
+      margin: 5px 0;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>2025 Car Models</h1>
+</header>
+
+<div class="container">
+  <div class="car">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.SH2SWTEyG83OjKDYBof7NwHaEK?pid=Api&P=0&h=180" alt="2025 EV">
+    <div class="details">
+      <h3>Tesla Model Z</h3>
+      <div class="specs">Electric | 600 km range | Auto Pilot 3.0</div>
+      <div class="price">32.2 Lakhs</div>
+       <button onclick="addToShortlist('Tesla Model Z')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.VfqFE3EnW38hwmgr9u5O0QHaE2?pid=Api&P=0&h=180" alt="2025 SUV">
+    <div class="details">
+      <h3>Hyundai Palisade 2025</h3>
+      <div class="specs">Diesel | 7-Seater | 15.0 km/l</div>
+      <div class="price">42.1 Lakhs</div>
+             <button onclick="addToShortlist('Hyundai Palisade 2025')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.KhjXgnPwAcgkQU3TnIfLvQHaEK?pid=Api&P=0&h=180" alt="2025 Sedan">
+    <div class="details">
+      <h3>Honda Accord Hybrid</h3>
+      <div class="specs">Hybrid | 23.0 km/l | Luxury Interior</div>
+      <div class="price">33.5 Lakhs</div>
+       <button onclick="addToShortlist('Honda Accord Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.ZmmxC1nwWpG2pnLEkUyTUQHaFM?pid=Api&P=0&h=180" alt="2025 Coupe">
+    <div class="details">
+      <h3>Audi A7 2025</h3>
+      <div class="specs">Petrol | DCT | 12.5 km/l</div>
+      <div class="price">55.2 Lakhs</div>
+       <button onclick="addToShortlist('Honda Accord Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.VY-GIKTV9lEIx8FQhwDP2wHaEK?pid=Api&P=0&h=180" alt="2025 Van">
+    <div class="details">
+      <h3>Kia Carnival Next Gen</h3>
+      <div class="specs">Diesel | 8-Seater | 13.5 km/l</div>
+      <div class="price">38.2 Lakhs</div>
+      <button onclick="addToShortlist('Honda Accord Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

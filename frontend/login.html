@@ -1,0 +1,34 @@
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // prevent page reload
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await response.json();
+
+    if (data.message === "Login successful") {
+      localStorage.setItem("user", JSON.stringify(data.user));
+      alert("Login successful!");
+      window.location.href = "index.html"; // redirect after login
+    } else {
+      alert(data.message);
+    }
+  } catch (err) {
+    console.error("Login error:", err);
+    alert("Something went wrong. Try again later.");
+  }
+});
+</script>

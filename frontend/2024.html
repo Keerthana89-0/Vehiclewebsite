@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2024 Car Models</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .category h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .car {
+      background-color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .car img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .car-details {
+      flex: 1;
+    }
+
+    .car-details h3 {
+      margin-top: 0;
+      color: #34495e;
+    }
+
+    .specs {
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>2024 Car Models</h1>
+</header>
+
+<div class="container">
+
+  <!-- Petrol Cars -->
+  <div class="category">
+    <h2>Petrol Cars</h2>
+    <div class="car">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.jN7e8te0lQo-Bi9kp1sDOgHaEK?pid=Api&P=0&h=180" alt="Swift Petrol">
+      <div class="car-details">
+        <h3>2024 Maruti Swift ZXi</h3>
+        <div class="specs">Manual | Petrol | 22.38 km/l</div>
+        <div class="price">9.2 Lakhs</div>
+        <button onclick="addToShortlist('Tata Tiago EV')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diesel Cars -->
+  <div class="category">
+    <h2>Diesel Cars</h2>
+    <div class="car">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.SalZqk5_EQ1lNxHsN7s3VAHaD4?pid=Api&P=0&h=180" alt="Seltos Diesel">
+      <div class="car-details">
+        <h3>2024 Kia Seltos HTX Diesel</h3>
+        <div class="specs">Automatic | Diesel | 20.7 km/l</div>
+        <div class="price">33.1 Lakhs</div>
+        <button onclick="addToShortlist('Tata Tiago EV')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Electric Cars -->
+  <div class="category">
+    <h2>Electric Cars</h2>
+    <div class="car">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.b1jPqVnOEbP_80FYtnLi6wHaEK?pid=Api&P=0&h=180" alt="Nexon EV">
+      <div class="car-details">
+        <h3>2024 Tata Nexon EV Max</h3>
+        <div class="specs">Automatic | Electric | Range: 453 km</div>
+        <div class="price">24.0 Lakhs</div>
+        <button onclick="addToShortlist('Tata Tiago EV')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- CNG Cars -->
+  <div class="category">
+    <h2>CNG Cars</h2>
+    <div class="car">
+      <img src="https://img.indianautosblog.com/2021/06/10/maruti-suzuki-wagonr-lxi-front-quarter-1f95.jpg" alt="WagonR CNG">
+      <div class="car-details">
+        <h3>2024 Maruti WagonR LXI CNG</h3>
+        <div class="specs">Manual | CNG | 25.5 km/kg</div>
+        <div class="price">9.7 Lakhs</div>
+        <button onclick="addToShortlist('Maruti WagonR LXI CNG')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hybrid Cars -->
+  <div class="category">
+    <h2>Hybrid Cars</h2>
+    <div class="car">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.bBN1s0tet9UFbE1sJWKZ2AHaEK?pid=Api&P=0&h=180" alt="Camry Hybrid">
+      <div class="car-details">
+        <h3>2024 Toyota Camry Hybrid</h3>
+        <div class="specs">Automatic | Hybrid | 22.8 km/l</div>
+        <div class="price">35.2 Lakhs</div>
+        <button onclick="addToShortlist('Toyota Camry Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

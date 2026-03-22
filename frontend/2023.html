@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2023 Car Models</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .category h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .car {
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .car img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .car-details {
+      flex: 1;
+    }
+
+    .car-details h3 {
+      margin-top: 0;
+      color: #34495e;
+    }
+
+    .specs {
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>2023 Car Models</h1>
+</header>
+
+<div class="container">
+
+  <!-- Petrol Cars -->
+  <div class="category">
+    <h2>Petrol Cars</h2>
+    <div class="car">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.H-zdbrt9j2CWj8RD8tzSWgHaE6?pid=Api&P=0&h=180" alt="Baleno Petrol">
+      <div class="car-details">
+        <h3>2023 Maruti Baleno Zeta</h3>
+        <div class="specs">Manual | Petrol | 22.35 km/l</div>
+        <div class="price">10.2 Lakhs</div>
+        <button onclick="addToShortlist('Maruti Baleno Zeta')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Diesel Cars -->
+  <div class="category">
+    <h2>Diesel Cars</h2>
+    <div class="car">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.jrlBuvKFR9QayhNaufxJDgHaE6?pid=Api&P=0&h=180" alt="Creta Diesel">
+      <div class="car-details">
+        <h3>2023 Hyundai Creta SX Diesel</h3>
+        <div class="specs">Automatic | Diesel | 21.4 km/l</div>
+        <div class="price">23.1 Lakhs</div>
+        <button onclick="addToShortlist('Hyundai Creta SX Diesel')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Electric Cars -->
+  <div class="category">
+    <h2>Electric Cars</h2>
+    <div class="car">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.LLB90gn2YxuyBGraFjmTcwHaEK?pid=Api&P=0&h=180" alt="Tiago EV">
+      <div class="car-details">
+        <h3>2023 Tata Tiago EV</h3>
+        <div class="specs">Automatic | Electric | Range: 315 km</div>
+        <div class="price">14.2 Lakhs</div>
+        <button onclick="addToShortlist('Tata Tiago EV')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- CNG Cars -->
+  <div class="category">
+    <h2>CNG Cars</h2>
+    <div class="car">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.hDs9_q_4W3trJEr8Sl9q5QHaFj?pid=Api&P=0&h=180" alt="Alto CNG">
+      <div class="car-details">
+        <h3>2023 Maruti Alto LXI CNG</h3>
+        <div class="specs">Manual | CNG | 31.5 km/kg</div>
+        <div class="price">6.4 Lakhs</div>
+        <button onclick="addToShortlist('Maruti Alto LXI CNG')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hybrid Cars -->
+  <div class="category">
+    <h2>Hybrid Cars</h2>
+    <div class="car">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.hDs9_q_4W3trJEr8Sl9q5QHaFj?pid=Api&P=0&h=180" alt="Urban Cruiser Hybrid">
+      <div class="car-details">
+        <h3>2023 Toyota Urban Cruiser Hyryder</h3>
+        <div class="specs">Automatic | Hybrid | 27.97 km/l</div>
+        <div class="price">20.2 Lakhs</div>
+        <button onclick="addToShortlist('Toyota Urban Cruiser Hyryder')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

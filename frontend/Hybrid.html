@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hybrid Cars</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef5f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #9b59b6;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .car {
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .car img {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .car-details {
+      flex: 1;
+    }
+
+    .car-details h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .specs {
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .price {
+      color: #2ecc71;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hybrid Cars</h1>
+</header>
+
+<div class="container">
+
+  <div class="car">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.X-9ENv_fuSDvXse7eWzbcwHaEX?pid=Api&P=0&h=180" alt="Toyota Camry Hybrid">
+    <div class="car-details">
+      <h3>2024 Toyota Camry Hybrid</h3>
+      <div class="specs">Automatic | Hybrid | 0 km | 22.8 km/l</div>
+      <div class="price">20 Lakhs</div>
+      <button onclick="addToShortlist(' Toyota Camry Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse3.mm.bing.net/th?id=OIF.PPd%2fOYq%2bfYnL%2f6ZEwpfwIA&pid=Api&P=0&h=180" alt="Honda City Hybrid">
+    <div class="car-details">
+      <h3>2024 Honda City e:HEV</h3>
+      <div class="specs">Automatic | Hybrid | 0 km | 26.5 km/l</div>
+      <div class="price">23.0 Lakhs</div>
+      <button onclick="addToShortlist(' Honda City e:HEV')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+  <div class="car">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.WpmKhTTY4evgCrDVoY6OqwHaEA?pid=Api&P=0&h=180" alt="Grand Vitara Hybrid">
+    <div class="car-details">
+      <h3>2024 Maruti Grand Vitara Hybrid</h3>
+      <div class="specs">Automatic | Hybrid | 0 km | 27.97 km/l</div>
+      <div class="price">23.2 Lakhs</div>
+      <button onclick="addToShortlist(' Maruti Grand Vitara Hybrid')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

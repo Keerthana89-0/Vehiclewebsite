@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hatchback Cars</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f6f8; padding: 20px; }
+    header { background-color: #34495e; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .car { background-color: white; display: flex; padding: 15px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .car img { width: 200px; height: auto; border-radius: 8px; margin-right: 20px; }
+    .car-details h3 { margin-top: 0; }
+    .specs, .seller { color: #555; margin-top: 5px; }
+    .price { color: green; font-weight: bold; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hatchback Cars</h1>
+</header>
+
+<div class="container">
+  
+        <div class="car">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.UneT6NytQgfkbMaDr8fynAHaEL?pid=Api&P=0&h=180" alt="Maruti Swift ZXI">
+            <div class="car-details">
+                <h3>Maruti Swift ZXI</h3>
+                <div class="specs">Petrol | 22.0 km/l</div>
+                <div class="price">8.3 Lakhs</div>
+                <div class="seller">Seller: Star Cars, Kolkata</div>
+                <button onclick="addToShortlist('Maruti Swift ZXI')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.Rw0OKf2TAz2m5mWTMDW62gHaDh?pid=Api&P=0&h=180" alt="Hyundai Grand i10">
+            <div class="car-details">
+                <h3>Hyundai Grand i10</h3>
+                <div class="specs">Petrol | 20.5 km/l</div>
+                <div class="price">7.4 lakhs</div>
+                <div class="seller">Seller: Green Garage, Pune</div>
+                <button onclick="addToShortlist('Hyundai Grand i10')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.Cn--t2UV8PLDcA8te6dPfgHaFj?pid=Api&P=0&h=180" alt="Tata Tiago XZ">
+            <div class="car-details">
+                <h3>Tata Tiago XZ</h3>
+                <div class="specs">Petrol | 23.0 km/l</div>
+                <div class="price">7.4 Lakhs</div>
+                <div class="seller">Seller: AutoDeals, Ahmedabad</div>
+                <button onclick="addToShortlist('Tata Tiago XZ')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.W9S3JD1aRJx82Fg4-jSr5wHaEc?pid=Api&P=0&h=180" alt="Renault Kwid RXT">
+            <div class="car-details">
+                <h3>Renault Kwid RXT</h3>
+                <div class="specs">Petrol | 22.3 km/l</div>
+                <div class="price">7.8 Lakhs</div>
+                <div class="seller">Seller: CarHub, Jaipur</div>
+                <button onclick="addToShortlist('Renault Kwid RXT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.Ev-i5Yrfs1QSQkEjtn450wHaEK?pid=Api&P=0&h=180" alt="Ford Figo Titanium">
+            <div class="car-details">
+                <h3>Ford Figo Titanium</h3>
+                <div class="specs">Diesel | 24.4 km/l</div>
+                <div class="price">15 Lakhs</div>
+                <div class="seller">Seller: City Auto, Lucknow</div>
+                <button onclick="addToShortlist('Ford Figo Titanium')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+</div>
+
+</body>
+</html>

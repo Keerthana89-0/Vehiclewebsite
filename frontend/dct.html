@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DCT Transmission Cars</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f9fbfd; padding: 20px; }
+    header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 1000px; margin: 20px auto; }
+    .car { display: flex; background: white; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; }
+    .car img { width: 200px; height: auto; border-radius: 8px; margin-right: 20px; }
+    .car-details h3 { margin: 0; }
+    .specs { color: #555; }
+    .price { color: green; font-weight: bold; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DCT Transmission Cars</h1>
+  </header>
+  <div class="container">
+    
+        <div class="car">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.HrjruahteU2FCsez-Sxy7AHaEK?pid=Api&P=0&h=180" alt="Hyundai Venue SX DCT">
+            <div class="car-details">
+                <h3>Hyundai Venue SX DCT</h3>
+                <div class="specs">Petrol | 18.2 km/l</div>
+                <div class="price">12.8 Lakhs </div>
+                <button> onclick="addToShortlist('Hyundai Venue SX DCT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.VLyPWXF14qqpf7jNKlfFswHaE8?pid=Api&P=0&h=180" alt="Kia Sonet GTX+ DCT">
+            <div class="car-details">
+                <h3>Kia Sonet GTX+ DCT</h3>
+                <div class="specs">Petrol | 18.3 km/l</div>
+                <div class="price">12.7 Lakhs</div>
+                <button> onclick="addToShortlist('Kia Sonet GTX+ DCT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.OiECT47spSWRqv7-hnA6WwHaE6?pid=Api&P=0&h=180" alt="Volkswagen Taigun DCT">
+            <div class="car-details">
+                <h3>Volkswagen Taigun DCT</h3>
+                <div class="specs">Petrol | 17.8 km/l</div>
+                <div class="price">13.8 Lakhs</div>
+                <button> onclick="addToShortlist('Volkswagen Taigun DCT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.gzi5BsGcb-LKXMguBPTslAHaEK?pid=Api&P=0&h=180" alt="Skoda Kushaq DCT">
+            <div class="car-details">
+                <h3>Skoda Kushaq DCT</h3>
+                <div class="specs">Petrol | 17.6 km/l</div>
+                <div class="price">13.7 Lakhs</div>
+                <button> onclick="addToShortlist('Skoda Kushaq DCT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.IvWO-pvYsrsbC69RdphbUgHaD_?pid=Api&P=0&h=180" alt="MG Astor DCT">
+            <div class="car-details">
+                <h3>MG Astor DCT</h3>
+                <div class="specs">Petrol | 14.3 km/l</div>
+                <div class="price">14.2 Lakhs</div>
+                <button> onclick="addToShortlist('MG Astor DCT')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convertible Cars</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f6f8; padding: 20px; }
+    header { background-color: #34495e; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .car { background-color: white; display: flex; padding: 15px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .car img { width: 200px; height: auto; border-radius: 8px; margin-right: 20px; }
+    .car-details h3 { margin-top: 0; }
+    .specs, .seller { color: #555; margin-top: 5px; }
+    .price { color: green; font-weight: bold; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Convertible Cars</h1>
+</header>
+
+<div class="container">
+  
+        <div class="car">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.xwl4cVS4NS_T3lQFdHrT0QHaE8?pid=Api&P=0&h=180" alt="Mini Cooper Convertible">
+            <div class="car-details">
+                <h3>Mini Cooper Convertible</h3>
+                <div class="specs">Petrol | 16.3 km/l</div>
+                <div class="price">28.0 Lakhs</div>
+                <div class="seller">Seller: Luxury Wheels, Mumbai</div>
+                <button onclick="addToShortlist('Mini Cooper Convertible')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.ItqwdwArZC-edsIhgymj7gHaE8?pid=Api&P=0&h=180" alt="BMW Z4">
+            <div class="car-details">
+                <h3>BMW Z4</h3>
+                <div class="specs">Petrol | 14.4 km/l</div>
+                <div class="price">33.2 Lakhs</div>
+                <div class="seller">Seller: HiLine Motors, Delhi</div>
+                <button onclick="addToShortlist('BMW Z4')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.RXrOhnvE59E572Zyr1Bi6QHaEK?pid=Api&P=0&h=180" alt="Audi A5 Cabriolet">
+            <div class="car-details">
+                <h3>Audi A5 Cabriolet</h3>
+                <div class="specs">Petrol | 13.0 km/l</div>
+                <div class="price">55.2 lakhs</div>
+                <div class="seller">Seller: Elite Drive, Hyderabad</div>
+                <button onclick="addToShortlist('Audi A5 Cabriolet')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.rlTgmpahr_klSzqC26kdMgHaEA?pid=Api&P=0&h=180" alt="Jaguar F-Type">
+            <div class="car-details">
+                <h3>Jaguar F-Type</h3>
+                <div class="specs">Petrol | 12.3 km/l</div>
+                <div class="price">35.2 Lakhs</div>
+                <div class="seller">Seller: Dream Cars, Bangalore</div>
+                <button onclick="addToShortlist('Jaguar F-Type')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+        <div class="car">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.0qYV5aioZyVhEGJ720FXaQHaEK?pid=Api&P=0&h=180" alt="Mercedes C-Class Cabriolet">
+            <div class="car-details">
+                <h3>Mercedes C-Class Cabriolet</h3>
+                <div class="specs">Petrol | 12.2 km/l</div>
+                <div class="price">34.7 Lakhs</div>
+                <div class="seller">Seller: SuperAuto, Chennai</div>
+                <button onclick="addToShortlist('Mercedes C-Class Cabriolet')" class="btn btn-outline-danger mt-2">🛒 Add to Cart</button>
+<script>
+  function addToShortlist(car) {
+    fetch("http://localhost:5000/shortlist", {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:localStorage.getItem("userEmail"),car})});
+  }
+</script>
+            </div>
+        </div>
+        
+</div>
+
+</body>
+</html>
